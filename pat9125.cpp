@@ -33,7 +33,7 @@ bool PAT9125::pat9125_read_pid(){
   else return false; 
 }
 
-void PAT9125::pat9125_set_res(uint8_t xres, uint8_t yres, bool bitres12 = false) {
+void PAT9125::pat9125_set_res(uint8_t xres, uint8_t yres, bool bitres12) {
   if (bitres12) write_reg(PAT9125_ORIENTATION, 0x04);//12bit resolution
   write_reg(PAT9125_RES_X, xres);
   write_reg(PAT9125_RES_Y, yres);
